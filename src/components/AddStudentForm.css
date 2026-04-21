@@ -1,0 +1,143 @@
+.form-card {
+    animation: fadeUp 0.5s ease 0.15s both;
+}
+
+.card {
+    background: #0a0a16;
+    border: 1px solid #00f3ff44;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #00f3ff44;
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #00f3ff;
+    text-shadow: 0 0 8px rgba(0, 243, 255, 0.6);
+    letter-spacing: 0.3px;
+}
+
+.form-grid {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 1rem;
+    align-items: start;
+}
+
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #6b7280;
+}
+
+.form-input {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #00f3ff44;
+    background: #050510;
+    color: #00f3ff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    width: 100%;
+}
+
+.form-input:focus {
+    border-color: #00f3ff;
+    background: #0a0a16;
+    box-shadow: 0 0 12px rgba(0, 243, 255, 0.4);
+}
+
+.form-input--error {
+    border-color: #ff003c !important;
+    box-shadow: 0 0 12px rgba(255, 0, 60, 0.4) !important;
+    animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-6px);
+    }
+
+    75% {
+        transform: translateX(6px);
+    }
+}
+
+.error-msg {
+    font-size: 11px;
+    color: #ff003c;
+    text-shadow: 0 0 5px rgba(255, 0, 60, 0.5);
+    margin-top: 2px;
+}
+
+
+
+.btn-primary {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 10px;
+    border: 1px solid #ff003c;
+    background: #ff003c22;
+    color: #ff003c;
+    text-shadow: 0 0 8px rgba(255, 0, 60, 0.8);
+    cursor: pointer;
+    transition: all 0.18s;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+    box-shadow: 0 0 15px rgba(255, 0, 60, 0.3);
+}
+
+.btn-primary:hover {
+    background: #ff003c;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(255, 0, 60, 0.6);
+}
+
+.btn-primary:active {
+    transform: scale(0.97);
+    box-shadow: none;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
